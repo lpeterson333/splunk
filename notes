@@ -18,4 +18,36 @@ using time to limit search results is most efficient
 limit search scope before | will also improve performance
 limit by index, source, host, sourcetype to improve performance as these terms are extracted when data is initially indexed
 limit by more specific terms
-inclusion is better than exclusion
+inclusion is better than exclusion ex: "access denied" is better than NOT "access granted"
+use the OR or IN rather than wildcards*  ex:  "user=admin OR user=administrator" , user IN (admin, administrator)
+
+Knowledge Objects
+5 types of data knowledge objects
+  
+  Interpretation - fields, field extractions, calculated fields
+  Classification - event types, transactions
+  Enrichment - lookups, workflow actions
+  Normalization - tags, field aliases
+  Models - hierarchically structured datasets
+A knowledge manager oversees creating knowledge objects, implements naming conventions, normalizes event data and creates data models.
+
+Interpretation
+fields - automatically extracted when data is indexed
+field extraction - can manually extract fields to add to your data
+calculated fields - are added to events at search time and can result from calculations based on existing fields
+
+Classification
+event types - categorize fields based on search terms
+transactions - groups of conceptually related events that span time
+
+Enrichment
+lookups - match field-value combinations in your event data with field-value combinations in external lookup tables. If Splunk software finds those field-value combinations in your lookup table, it appends the corresponding field-value combinations from the table to the events in your search.Lookups can reference fields that are added to events by field extractions, field aliases, and calculated fields. They cannot reference event types and tags. https://community.splunk.com/t5/Knowledge-Management/Can-I-use-field-extractions-and-lookups-to-extend-the-power-of/td-p/476268 
+workflow actions - create links within events that interact with external resources or narrow search
+
+Normalization
+tags - create descriptive names for key:value pairs, enable searching for events which contain particular field values 
+field aliases - normalize field names over multiple sources.  Any extracted field can have one or more aliases.
+
+Models
+hierarchical structure dataset which consists of searchs, events or transactions
+
