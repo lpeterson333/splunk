@@ -51,3 +51,7 @@ field aliases - normalize field names over multiple sources.  Any extracted fiel
 Models
 hierarchical structure dataset which consists of searchs, events or transactions
 
+REPORTS
+when sharing reports if view as owner or run as owner is selected then the report will be run with the permissions of the original owner
+if sensitive data is included in the report then choose run as user rather than run as owner.  Then the report will be run with the permissions of the user not the owner.
+
