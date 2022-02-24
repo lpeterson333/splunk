@@ -1,2 +1,5 @@
 SPL
 boolean operator precedence NOT OR AND
+use ( ) to change order of precedence
+use " " to search for exact phrase
+use backslash \ to escape " if search term includes "
