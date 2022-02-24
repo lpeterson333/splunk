@@ -4,8 +4,18 @@ use ( ) to change order of precedence
 use " " to search for exact phrase
 use backslash \ to escape " if search term includes "
 
+
 Search Terms - self explanatory
 Commands - tells Splunk what to do with the search results, including creating charts, statistics and formatting
 Functions - explain how to chart, compute and evaluate results
 Arguments - the variables to apply to the function
 Clauses - explain how results are grouped or defined
+search terms, command names, functions and clauses are not case sensitive 
+BUT commands for a specific value are case sensitive
+
+Performance
+using time to limit search results is most efficient 
+limit search scope before | will also improve performance
+limit by index, source, host, sourcetype to improve performance as these terms are extracted when data is initially indexed
+limit by more specific terms
+inclusion is better than exclusion
