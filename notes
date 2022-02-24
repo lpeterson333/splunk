@@ -3,3 +3,9 @@ boolean operator precedence NOT OR AND
 use ( ) to change order of precedence
 use " " to search for exact phrase
 use backslash \ to escape " if search term includes "
+
+Search Terms - self explanatory
+Commands - tells Splunk what to do with the search results, including creating charts, statistics and formatting
+Functions - explain how to chart, compute and evaluate results
+Arguments - the variables to apply to the function
+Clauses - explain how results are grouped or defined
